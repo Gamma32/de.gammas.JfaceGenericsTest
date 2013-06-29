@@ -1,4 +1,4 @@
-package de.gammas.JfaceGenericsTest.parts;
+package de.gammas.JfaceGenericsTest.model;
 
 import java.util.Date;
 
