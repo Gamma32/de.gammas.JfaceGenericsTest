@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_tuzekNrsEeK_VZOadamEyg" elementId="org.eclipse.e4.ide.application" bindingContexts="_tu0FoNrsEeK_VZOadamEyg">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_tuzekdrsEeK_VZOadamEyg" label="de.gammas.JfaceGenericsTest" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_tu0stNrsEeK_VZOadamEyg">
+      <children xsi:type="advanced:Perspective" xmi:id="_tu0stdrsEeK_VZOadamEyg">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_tu0sttrsEeK_VZOadamEyg">
+          <children xsi:type="basic:PartStack" xmi:id="_tu0st9rsEeK_VZOadamEyg">
+            <children xsi:type="basic:Part" xmi:id="_tu0suNrsEeK_VZOadamEyg" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.SamplePart" label="Sample Part"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_tu0FsNrsEeK_VZOadamEyg" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_tu0FsdrsEeK_VZOadamEyg" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_tu0FstrsEeK_VZOadamEyg" label="Open" iconURI="platform:/plugin/de.gammas.JfaceGenericsTest/icons/sample.gif" command="_tu0Fp9rsEeK_VZOadamEyg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_tu0ssNrsEeK_VZOadamEyg" label="Save" iconURI="platform:/plugin/de.gammas.JfaceGenericsTest/icons/save_edit.gif" command="_tu0FqtrsEeK_VZOadamEyg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_tu0ssdrsEeK_VZOadamEyg" label="Quit" command="_tu0Fo9rsEeK_VZOadamEyg"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_tu0sstrsEeK_VZOadamEyg" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_tu0ss9rsEeK_VZOadamEyg" label="About" command="_tu0FrdrsEeK_VZOadamEyg"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_tu0sudrsEeK_VZOadamEyg">
+      <children xsi:type="menu:ToolBar" xmi:id="_tu0sutrsEeK_VZOadamEyg" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_tu0su9rsEeK_VZOadamEyg" iconURI="platform:/plugin/de.gammas.JfaceGenericsTest/icons/sample.gif" command="_tu0Fp9rsEeK_VZOadamEyg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_tu0svNrsEeK_VZOadamEyg" iconURI="platform:/plugin/de.gammas.JfaceGenericsTest/icons/save_edit.gif" command="_tu0FqtrsEeK_VZOadamEyg"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_tu0FpNrsEeK_VZOadamEyg" elementId="de.gammas.JfaceGenericsTest.handler.quitCommand" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.handlers.QuitHandler" command="_tu0Fo9rsEeK_VZOadamEyg"/>
+  <handlers xmi:id="_tu0FqNrsEeK_VZOadamEyg" elementId="de.gammas.JfaceGenericsTest.handler.openCommand" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.handlers.OpenHandler" command="_tu0Fp9rsEeK_VZOadamEyg"/>
+  <handlers xmi:id="_tu0Fq9rsEeK_VZOadamEyg" elementId="de.gammas.JfaceGenericsTest.handler.saveCommand" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.handlers.SaveHandler" command="_tu0FqtrsEeK_VZOadamEyg"/>
+  <handlers xmi:id="_tu0FrtrsEeK_VZOadamEyg" elementId="de.gammas.JfaceGenericsTest.handler.aboutCommand" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.handlers.AboutHandler" command="_tu0FrdrsEeK_VZOadamEyg"/>
+  <bindingTables xmi:id="_tu0FpdrsEeK_VZOadamEyg" bindingContext="_tu0FoNrsEeK_VZOadamEyg">
+    <bindings xmi:id="_tu0FptrsEeK_VZOadamEyg" keySequence="M1+Q" command="_tu0Fo9rsEeK_VZOadamEyg"/>
+    <bindings xmi:id="_tu0FqdrsEeK_VZOadamEyg" keySequence="M1+O" command="_tu0Fp9rsEeK_VZOadamEyg"/>
+    <bindings xmi:id="_tu0FrNrsEeK_VZOadamEyg" keySequence="M1+S" command="_tu0FqtrsEeK_VZOadamEyg"/>
+    <bindings xmi:id="_tu0Fr9rsEeK_VZOadamEyg" keySequence="M1+A" command="_tu0FrdrsEeK_VZOadamEyg"/>
+  </bindingTables>
+  <rootContext xmi:id="_tu0FoNrsEeK_VZOadamEyg" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_tu0FodrsEeK_VZOadamEyg" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_tu0FotrsEeK_VZOadamEyg" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_tu0Fo9rsEeK_VZOadamEyg" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_tu0Fp9rsEeK_VZOadamEyg" elementId="de.gammas.JfaceGenericsTest.open" commandName="openCommand"/>
+  <commands xmi:id="_tu0FqtrsEeK_VZOadamEyg" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_tu0FrdrsEeK_VZOadamEyg" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_tuzektrsEeK_VZOadamEyg" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_tuzek9rsEeK_VZOadamEyg" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_tuzelNrsEeK_VZOadamEyg" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_tuzeldrsEeK_VZOadamEyg" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_tuzeltrsEeK_VZOadamEyg" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_tuzel9rsEeK_VZOadamEyg" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_tuzemNrsEeK_VZOadamEyg" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
