@@ -8,6 +8,7 @@
             <children xsi:type="basic:Part" xmi:id="_tu0suNrsEeK_VZOadamEyg" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.SamplePart" label="ComboVIewer"/>
             <children xsi:type="basic:Part" xmi:id="_LBaRcPXSEeKQrd3oV49GAA" elementId="de.gammas.jfacegenericstest.part.0" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.TreeViewerPart" label="TreeViewer"/>
             <children xsi:type="basic:Part" xmi:id="_g5b7YPXXEeKQrd3oV49GAA" elementId="de.gammas.jfacegenericstest.part.1" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.TableViewerPart" label="TableViewer"/>
+            <children xsi:type="basic:Part" xmi:id="_YGlMkPrjEeKThNZSZ6i-rA" elementId="de.gammas.jfacegenericstest.part.2" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.ListViewerPart" label="ListViewer"/>
           </children>
         </children>
       </children>
@@ -33,6 +34,7 @@
   <handlers xmi:id="_tu0FqNrsEeK_VZOadamEyg" elementId="de.gammas.JfaceGenericsTest.handler.openCommand" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.handlers.OpenHandler" command="_tu0Fp9rsEeK_VZOadamEyg"/>
   <handlers xmi:id="_tu0Fq9rsEeK_VZOadamEyg" elementId="de.gammas.JfaceGenericsTest.handler.saveCommand" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.handlers.SaveHandler" command="_tu0FqtrsEeK_VZOadamEyg"/>
   <handlers xmi:id="_tu0FrtrsEeK_VZOadamEyg" elementId="de.gammas.JfaceGenericsTest.handler.aboutCommand" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.handlers.AboutHandler" command="_tu0FrdrsEeK_VZOadamEyg"/>
+  <handlers xmi:id="_KdLK4PhiEeK9V7wh5hAnag" elementId="de.gammas.jfacegenericstest.handler.0" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.handlers.UpdateContent" command="_Nb_FYPhiEeK9V7wh5hAnag"/>
   <bindingTables xmi:id="_tu0FpdrsEeK_VZOadamEyg" bindingContext="_tu0FoNrsEeK_VZOadamEyg">
     <bindings xmi:id="_tu0FptrsEeK_VZOadamEyg" keySequence="M1+Q" command="_tu0Fo9rsEeK_VZOadamEyg"/>
     <bindings xmi:id="_tu0FqdrsEeK_VZOadamEyg" keySequence="M1+O" command="_tu0Fp9rsEeK_VZOadamEyg"/>
@@ -47,6 +49,7 @@
   <commands xmi:id="_tu0Fp9rsEeK_VZOadamEyg" elementId="de.gammas.JfaceGenericsTest.open" commandName="openCommand"/>
   <commands xmi:id="_tu0FqtrsEeK_VZOadamEyg" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_tu0FrdrsEeK_VZOadamEyg" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_Nb_FYPhiEeK9V7wh5hAnag" elementId="de.gammas.jfacegenericstest.command.0" commandName="updateContentCommand"/>
   <addons xmi:id="_tuzektrsEeK_VZOadamEyg" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_tuzek9rsEeK_VZOadamEyg" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_tuzelNrsEeK_VZOadamEyg" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

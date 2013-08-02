@@ -10,14 +10,19 @@ import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.EditingSupport;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TextCellEditor;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
+import de.gammas.JfaceGenericsTest.model.MyDomainModel;
 import de.gammas.JfaceGenericsTest.model.Person;
 
 public class TableViewerPart {
@@ -31,27 +36,52 @@ public class TableViewerPart {
 				
 			}
 
-			public void inputChanged(Viewer viewer, Object  oldInput, Object newInput) {
-				
-			}
 
-			public Object[] getElements(Object inputElement) {
-				Person[] persons = (Person[]) inputElement;
-				
+			public Person[] getElements(Object inputElement) {
+				Person[] persons = ((MyDomainModel)inputElement).getRoot();
+				Person[] flatPersonsArray = new Person[1];
 				List<Person> flatPersons = new ArrayList<Person>();
 				
 				flatTree(persons, flatPersons);
 			
 				
-				return flatPersons.toArray();
-				
-				//return (Object[])inputElement;
+				return (Person[]) flatPersons.toArray(flatPersonsArray);
 			}
-			
-			
+
+
+			public void inputChanged(Viewer viewer, Object oldInput,
+					Object newInput) {
+				// TODO Auto-generated method stub
+				
+			}
 			
 		});
 		
+		class PersonFilter extends ViewerFilter{
+
+			@Override
+			public boolean select(Viewer viewer, Object parentElement,
+					Object element) {
+				
+				Person person = (Person) element;
+				
+				return person.getName().matches(".*e.*");
+			}
+			
+		}
+		
+		class MySelectionChangedListner implements ISelectionChangedListener{
+
+			public void selectionChanged(SelectionChangedEvent event) {
+				IStructuredSelection selection = (IStructuredSelection) event.getSelection();
+				
+				System.out.println(((Person)selection.getFirstElement()).getName());
+			}
+			
+		}
+		
+		tableViewer.addFilter(new PersonFilter());
+		tableViewer.addSelectionChangedListener(new MySelectionChangedListner());
 		
 
 		TableViewerColumn column = new TableViewerColumn(tableViewer, SWT.NONE); 
@@ -87,7 +117,9 @@ public class TableViewerPart {
 
 
 
-		tableViewer.setInput(this.generateInput());
+		tableViewer.setInput(new MyDomainModel());
+		
+		tableViewer.refresh();
 	}
 	
 	private void flatTree(Object[] persons, List<Person> flatPersons){
