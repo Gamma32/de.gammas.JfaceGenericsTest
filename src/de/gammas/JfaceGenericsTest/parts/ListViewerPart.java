@@ -20,42 +20,42 @@ public class ListViewerPart {
 	@Inject
 	public ListViewerPart(Composite composite) {
 		
-		ListViewer listViewer = new ListViewer(composite);
+		ListViewer<Person,MyDomainModel> listViewer = new ListViewer<Person,MyDomainModel>(composite);
 		
 		
 		
-		listViewer.setContentProvider(new IStructuredContentProvider() {
+		listViewer.setContentProvider(new IStructuredContentProvider<Person,MyDomainModel>() {
 
 			public void dispose() {
 				
 			}
 
 
-			public Object[] getElements(Object inputElement) {
+			public void inputChanged(Viewer<MyDomainModel> viewer,
+					MyDomainModel oldInput, MyDomainModel newInput) {
+				viewer.refresh();
+			}
+
+
+			public Person[] getElements(MyDomainModel inputElement) {
 				
+				Person[] result = new Person[1];
 				List<Person> flatPersons = new ArrayList<Person>();
 				flatPersons = ((MyDomainModel)inputElement).getFlatList();
 			
 				
-				return flatPersons.toArray();
-			}
-
-
-			public void inputChanged(Viewer viewer, Object oldInput,
-					Object newInput) {
-				// TODO Auto-generated method stub
-				
+				return flatPersons.toArray(result);
 			}
 			
 		});
 		
 		listViewer.setInput(new MyDomainModel());
 		
-		listViewer.setLabelProvider(new LabelProvider(){
+		listViewer.setLabelProvider(new LabelProvider<Person>(){
 			@Override
-			public String getText(Object element) {
+			public String getText(Person element) {
 				
-				return ((Person)element).getName();
+				return element.getName();
 			}
 		});
 		
