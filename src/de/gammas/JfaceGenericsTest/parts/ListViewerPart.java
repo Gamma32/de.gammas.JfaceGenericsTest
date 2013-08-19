@@ -1,4 +1,4 @@
- 
+
 package de.gammas.JfaceGenericsTest.parts;
 
 import java.util.ArrayList;
@@ -17,56 +17,56 @@ import de.gammas.JfaceGenericsTest.model.MyDomainModel;
 import de.gammas.JfaceGenericsTest.model.Person;
 
 public class ListViewerPart {
-	@Inject
-	public ListViewerPart(Composite composite) {
-		
-		ListViewer<Person,MyDomainModel> listViewer = new ListViewer<Person,MyDomainModel>(composite);
-		
-		
-		
-		listViewer.setContentProvider(new IStructuredContentProvider<Person,MyDomainModel>() {
+//	@Inject
+//	public ListViewerPart(Composite composite) {
+//
+//		ListViewer<Person,MyDomainModel> listViewer = new ListViewer<Person,MyDomainModel>(composite);
+//
+//
+//
+//		listViewer.setContentProvider(new IStructuredContentProvider<Person,MyDomainModel>() {
+//
+//			public void dispose() {
+//
+//			}
+//
+//
+//			public void inputChanged(Viewer<MyDomainModel> viewer,
+//					MyDomainModel oldInput, MyDomainModel newInput) {
+//				viewer.refresh();
+//			}
+//
+//
+//			public Person[] getElements(MyDomainModel inputElement) {
+//
+//				Person[] result = new Person[1];
+//				List<Person> flatPersons = new ArrayList<Person>();
+//				flatPersons = ((MyDomainModel)inputElement).getFlatList();
+//
+//
+//				return flatPersons.toArray(result);
+//			}
+//
+//		});
+//
+//		listViewer.setInput(new MyDomainModel());
+//
+//		listViewer.setLabelProvider(new LabelProvider<Person>(){
+//			@Override
+//			public String getText(Person element) {
+//
+//				return element.getName();
+//			}
+//		});
+//
+//	}
 
-			public void dispose() {
-				
-			}
 
 
-			public void inputChanged(Viewer<MyDomainModel> viewer,
-					MyDomainModel oldInput, MyDomainModel newInput) {
-				viewer.refresh();
-			}
-
-
-			public Person[] getElements(MyDomainModel inputElement) {
-				
-				Person[] result = new Person[1];
-				List<Person> flatPersons = new ArrayList<Person>();
-				flatPersons = ((MyDomainModel)inputElement).getFlatList();
-			
-				
-				return flatPersons.toArray(result);
-			}
-			
-		});
-		
-		listViewer.setInput(new MyDomainModel());
-		
-		listViewer.setLabelProvider(new LabelProvider<Person>(){
-			@Override
-			public String getText(Person element) {
-				
-				return element.getName();
-			}
-		});
-		
-	}
-	
-	
-	
 	@Focus
 	public void onFocus() {
 		//TODO Your code here
 	}
-	
-	
+
+
 }

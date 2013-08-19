@@ -7,8 +7,8 @@
           <children xsi:type="basic:PartStack" xmi:id="_tu0st9rsEeK_VZOadamEyg">
             <children xsi:type="basic:Part" xmi:id="_tu0suNrsEeK_VZOadamEyg" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.SamplePart" label="ComboVIewer"/>
             <children xsi:type="basic:Part" xmi:id="_LBaRcPXSEeKQrd3oV49GAA" elementId="de.gammas.jfacegenericstest.part.0" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.TreeViewerPart" label="TreeViewer"/>
-            <children xsi:type="basic:Part" xmi:id="_g5b7YPXXEeKQrd3oV49GAA" elementId="de.gammas.jfacegenericstest.part.1" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.TableViewerPart" label="TableViewer"/>
-            <children xsi:type="basic:Part" xmi:id="_YGlMkPrjEeKThNZSZ6i-rA" elementId="de.gammas.jfacegenericstest.part.2" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.ListViewerPart" label="ListViewer"/>
+            <children xsi:type="basic:Part" xmi:id="_g5b7YPXXEeKQrd3oV49GAA" elementId="de.gammas.jfacegenericstest.part.1" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.TableViewerEasyPart" label="TableViewer"/>
+            <children xsi:type="basic:Part" xmi:id="_YGlMkPrjEeKThNZSZ6i-rA" elementId="de.gammas.jfacegenericstest.part.2" contributionURI="bundleclass://de.gammas.JfaceGenericsTest/de.gammas.JfaceGenericsTest.parts.ListViewerEasyPart" label="ListViewer"/>
           </children>
         </children>
       </children>
